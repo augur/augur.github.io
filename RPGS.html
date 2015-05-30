@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Role-Playing / Grand Strategy Genre Guideline</title>
+    <style>
+      body {
+        margin: 0 auto;
+        max-width: 960px;
+        text-align: justify;
+        line-height: 24px;
+      }
+      
+      h2 {
+        border-bottom: 1px solid black;  
+        padding-bottom: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header> 
+      <h1>Guideline to "Role-Playing / Grand Strategy" video game genre</h1>
+      <p>Version: (0.1) Preview</p>
+      <p>Date: 2015-##-##</p>
+      <br>
+      <p>Contents:</p>
+      <ol>
+        <li>Setting</li>
+        <li>Gameplay</li>
+        <li>Game Map</li>
+        <li>Troops</li>
+        <li>Characters</li>
+        <li>Events</li>
+        <li>Resource System</li>
+      </ol>
+    </header>
+    
+    <article>
+      <h2>Setting</h2>
+        <p>"Setting" in context of Gaming is either Fictional Universe or real Historic period. Game should be based on such Setting.</p>
+        <h3>Best practices for Setting:</h3>
+        <ul>
+          <li>Self-consistent and complete design</li>
+          <li>Highly detailed Lore</li>
+          <li>Rich and continuous history</li>
+          <li>Remaining mysteries and speculations</li>
+          <li>Multi-polar political world</li>
+        </ul>
+      <h2>Gameplay</h2>
+        <p>stub</p>
+        <h3>Victory conditions</h3>
+          <p>stub</p>
+        <h3>Styles of play</h3>
+          <p>stub</p>
+        <h3>Factions</h3>
+          <p>Each player controls single Faction. There may present Factions that are under AI control. Factions are free to ally\declare war on each others. However, there still can be some restrictions.</p>
+          <p>Factions are deeply dependent on Setting, so there are some requirements:</p>
+          <ul>
+            <li>Setting should allow a large number of major, rather independent playable Factions. Optimal range is between 10 and 20</li>
+            <li>There should be as less as possible Faction pairs, that are "sworn enemies", or "forever friends" (when it is no sense to change relationship by plot)
+            <li>
+              <p>Each faction should have notable possibility to win the game. In fact, overall Faction Powers have to be nearly equal.
+              There is approximate formula: <br>Faction Power = Initial Power + Potential Power + Initial Allies + Likely Allies - Initial Enemies - Likely Enemies</p>
+              <ul>
+                <li>Initial Power: amount of territories, troops, strategic positions Faction starts with. Initial Power may vary between least and most powerful by x3-x5 times</li>
+                <li>Potential Power: ability to accumulate force during game progress (specific events, more powerful units via technology, etc)</li>
+                <li>Initial Allies: amount of starting friendly Factions and their Powers</li>
+                <li>Likely Allies: Factions, that with high chance can become friends in future, and their Powers</li>
+                <li>Initial Enemies: amount of starting enemy Factions and their Powers</li>
+                <li>Likely Enemies: Factions, that with high chance can become enemies in future, and their Powers</li>
+              </ul>
+            </li>
+          </ul>
+          <h3>Game Balance</h3>
+            <p>stub</p>
+      <h2>Game Map</h2>
+        <ul>
+          <li>Map should contain major part of the Setting world (the more - the better), thus players can act in global scale</li>
+          <li>Path-map should be complex heterogeneous graph</li>
+          <li>There have to be a lot of special places, which are more important than others, by tactical, economical, eventual, Lore reasons</li>
+          <li>Naval and impassable areas should be rather frequent to enforce players use different typs of troops</li>
+        </ul>
+      
+       <h2>Troops</h2>
+        <p>Troops are represented by units of various types. There are good practices for Unit System:</p>
+          <h3>Combat types</h3>
+            <ul>
+              <li>Melee - rather endurant, attack at melee range</li>
+              <li>Ranged - usually weaker and with penalty in melee combat, but can attack on ditance</li>
+              <li>Casters - usually even weaker than ranged, have rather low direct attack, but use special abilities (autocast and/or manually cast), to support allies, suppress/deal damage to enemies.</li>
+            </ul>
+            <p>Type combining for several units is totally OK, but there must not be universal units. Also, powerful units should have weak spot. (These rules are supposed to prevent "unit spamming")</p>
+          <h3>Movement types</h3>
+            <ul>
+              <li>Land - common type. Can only move over passable dry land</li>
+              <li>Naval - can only move over water areas</li>
+              <li>Air - there are two implementations of Air system:
+                <ul>
+                    <li>Strong System - Air units can move literally everywhere. It imposes serious balancing of such units.</li>
+                    <li>Weak System - Only difference from land units is no collision, and targeting restrictions (see below). Sometimes moving over water is included.</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Movement types can be combined (for example: amphibious), or be switchable (for example between Land and Air). It is surely imposes extra balance on such units.</p>
+          <h3>Targeting</h3>
+            <p>Common logic of targeting between units of various movement types:</p>
+            <ul>
+              <li>Land units can target each other</li>
+              <li>Land ranged units can also target all Air and Naval units</li>
+              <li>Land melee units can target Air melee units (assuming these Air melee units can target Land units)</li>
+              <li>Naval melee units can only target other Naval units</li>
+              <li>Naval ranged units can target other Naval units, as well as Land units. Some units may also be allowed to target Air units.</li>
+              <li>Air units can usually target all units, however Air melee units can be targeted by Land melee units.</li> 
+            </ul>
+            <p>Thus "Air ranged" is the most balancing required type, whilst "Land melee" is the least.</p>
+          <h3>Elites</h3>
+            <p> So called "Elite units" is good genre practice. There are few rules about them:</p>
+            <ul>
+              <li>Each Faction has limited quantity of Elite units that can be controlled at the same time.</li>
+              <li>Elite units types are unique per each Faction.</li>
+              <li>Elite units power are proportional to middle-low leveled Characters (see below) power.
+              <li>Elite units are balacned to have about 20% less power than proportional (by cost and training time) number of common units. Thus, tactical advantage of Elites is in concentration of power in single unit, and their unique abilities.</li>
+            </ul>
+            <p>Elite's high cost should enforce player to use them more wisely, rather than just sending in slaughter. With proper micro-management, Elites can play crucial role in battles. However, game balance should prevent existence of armies, that consist mostly of Elites and Characters. It may be accomplished, for example, by giving Elites abilities to strengthen common troops.</p>
+          <h3>Special Units</h3>
+            <p> There are used to be few special units:</p>
+            <ul>
+              <li>Siege: long-ranged (most commonly Land) units, with main purpose to take down stationary defences. Supposed to be expensive, slow and weak (in order to have roughly equal cost, compared to stationary defence)</li> 
+              <li>Transport: units (mostly naval and air) for carrying other troops (mostly Land troops). Air transports should be strictly balanced, because of tactical advantage they give in case of Strong Air system.</li>
+              <li>Non-combat:
+                <ul>
+                  <li>Utilitary: used for various tasks, like constructing, repairing, resource extraction.</li>
+                  <li>Civilian: may be involved in some scripted events, and in addition, can be part of Game ambience.</li>
+                </ul>
+              </li>                
+            </ul>
+      <h2>Characters</h2>
+        <p>Characters - are Setting's valuable historical persons. Their actions can significantly affect the world. Characters are subjects of solid part of Role-playing, thus are very important. When player controls faction, he typically follows the will of faction's Characters.</p>
+        <p>There are Character rules:</p>
+        <ul>
+          <li>Desirable Character candidates are royal family (or other related to faction leadership) persons, nobles, folk heroes, famous criminals, renegades, rebels, all sort of powerful magicians, religious adepts (or whatever Setting has)</li>
+          <li>In fact any notable charismatic person is OK. The point is Player should empathize with the character.</li>
+          <li>Optimal number of Characters per player is between 3 and 5 (at least that are under control at the same time).</li>
+          <li>Character's death permanency is questionable: although player have to care about his Characters instead of constant revive-slaughter them, player also shouldn't be frustrated too much from Character's loss. Powerful Characters may become unavailable upon death, until special requirements are met. Weaker Characters may stay revivable all the time, but for example, lose some power, or become more costly to revive each next time.</li>
+          <ul>
+            <li>There is also may be some sort of "imprisonment" method: each defeated Character becomes imprisoned by his defeater, and can only be obtained again via destruction of his prison/cage</li>
+            <li>None of death rules should permit Player stay without Characters at all, even temporarily.</li>
+          </ul>
+          <li> Characters should be enhanceable: gain more power (mainly) through gaining combat experience, and also by in-game items, specific events.</li>
+        </ul>
+        <h3>Semi-characters</h3>
+          <p>Semi-characters are also historical persons, but play rather minor role in Setting. Rules are:</p>
+          <ul>
+            <li>Commonly are not enhanceable, nor revivable.</li>
+            <li>May play significant roles in specific events, according to the Setting's Lore.</li>
+            <li>Can be rather powerful, and act as a nonrenewable source of Elite units.</li>
+          </ul>
+      <h2>Events</h2>
+        <p>Scripted events ("scripted" means, they happen on specific conditions and consist of complex steps, not usually available by plain game mechanics) are vital part of genre. Common practices about events:</p>
+        <ul>
+          <li>Events should be mainly related to the Setting, give players a way to either follow it's history, or let occur events that might happen on the plot, but didn't.</li>
+          <li>Events may be considered as classic RPG "quests" in scale of Grand Strategy. However events should often have mutually exclusive goals per each player. </li>
+          <li>Event also pretend to be interesting, not like quests "kill x monsters, get reward".</li>
+          <li>Events should be differentiable by their impact: from really powerful, that significantely affect game balance, to minor, that effect are just cosmetic.</li>
+          <li>There are mainly single-faction and faction-pair related events, however, totally faction-independent events is good practice too.</li>
+          <li>Optimal number of events is 10-12 per Faction, varied by their impact.</li>
+          <li>Events don't have to be fully constrained. It means, if event happens almost in 100% of games, then it is designed poorly.</li>
+          <li>There should be special type of event for every faction, often called "Second Chance". As mentioned in "Game Balance" section, it gives players some opportunity to continue the game, if they seems to lost their initial position.</li>
+          <li>It is important to have (at least simple) "logic tree" of events - some events should unlock happening of another events, but also may prevent happening of some other events.</li>
+        </ul>
+      <h2>Resource System</h2>
+      <p>Resources are what players spend to gain more troops, buildings, etc. There may exist two types of resources:</p>
+      <ul>
+        <li>Main: completely unavoidable, required for any purchase. Continously collectable through control of regions.</li>
+        <li>Additional: 1-2 resources, that need some special actions to be collected. Player can persist some time without source of additional resources, but has much less further potential to win. Resources may be unrenewable, or slowly renewable.</li>
+      </ul>
+      <h3>Balancing</h3>
+        <p>Some tips, that can make Resource System more balanced:</p>
+        <ul>
+          <li>Some minimal Main resource income may be approved, in order to support Players that were pushed from their positions, but still willing to fight.</li>
+          <li>To prevent 'snowballing' by acquiring too many regions, income restrictions may be applied:</li>
+          <ul>
+            <li>"Hard" limit: income will never exceed some certain amount.</li>
+            <li>"Soft" limit: after certain threshold, income increases with progressive penalty, giving less than normal resources from each next region under control. There exists the limit, which can never be exceeded, and can only be reached by capturing all regions in the game.</li>
+          </ul>
+          <li>To regulate game's pace, (and make it distinguishable from RISK-like games),  </li>
+        </ul>
+    </article>
+    
+    <footer>
+      <br>
+      <p>Author: Kilchichakov Denis</p>
+      <p>License: CC BY-SA 3.0</p>
+    </footer>
+  </body>
+</html>
