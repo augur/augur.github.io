@@ -112,11 +112,18 @@
               <li>In perspective, proper balance can be achieved only after collecting data and feedback of huge amount of played game sessions. Common developer's mistake is to mix both "balance-tuning" and "new-feature" game updates: on every balance fix there must be another feedback collected, in order to assess the effect of the fix. With "new-feaures", even if they seem insignificant and independent, it becomes unclear.</li>
             </ul>
       <h2>Game Map</h2>
+        <p>Game Map is the area, where player combat and settling actions take place. Map is a part of game (alongside with the Characters), which has to by maximally influenced by the Setting. Most of the player recognition and associations should be driven by these parts. Thus contradiction with Setting here almost never is a good idea.</p>
+        <p>Common rules for Game Map are:</p>
         <ul>
-          <li>Map should contain major part of the Setting world (the more - the better), thus players can act in global scale</li>
-          <li>Path-map should be complex heterogeneous graph</li>
-          <li>There have to be a lot of special places, which are more important than others, by tactical, economical, eventual, Lore reasons</li>
-          <li>Naval and impassable areas should be rather frequent to enforce players use different typs of troops</li>
+          <li>Map should contain major part of the Setting world (the more - the better), thus players are able to act in global scale.</li>
+          <li>Modern game engines still limit map maximum size. In future, without such limits, maps shouldn't become <em>too</em> large. Empirical adequate size may be calculated from rule: "longest possible travel time for regular speed unit shouldn't exceed 1/20 of common game round time." For example, with average 1.5-hours game round length, regular unit should be able to get from any point, to any other point for no more than 4.5 minutes.</li>
+          <li>Map should be divided (at least formally) into different regions. Division mostly comes from Setting.</li>
+          <li>Connected regions may be represented as complex heterogeneous graph, where regions are vertices, and connections are edges.</li>
+          <li>Common number of vertex edges is 3. Only 1 edge (which makes some region a dead end) is rare case.</li>
+          <li>There have to be a lot of special places, which are more important than others, by tactical, economical, eventual, Lore reasons.</li>
+          <li>Especially should be noted presence of <em>choke points</em> (or <em>bottlenecks</em>). Places of combat advantage, that in some degree equalize differences between opponents troops amount. Choke points should be rather frequent: between each 1/10..1/20 of regions.</li>
+          <li>Presence of naval and other impassable regions should enforce players to use different typs of troops. </li>
+          <li>Naval regions graph is usually less complex. However some parts of its path-map can be as complex, as typical land, with choke points. </li>
         </ul>
       
        <h2>Troops</h2>
