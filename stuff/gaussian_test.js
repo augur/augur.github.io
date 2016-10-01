@@ -15,8 +15,8 @@ function do_tests(test_count, toss_count, test_func) {
   var t1 = performance.now();
 
   console.log('Elapsed time: ' + (t1 - t0).toFixed(3) + ' ms');
-  console.log('Minimum: ' + min);
-  console.log('Maximum: ' + max);
+  console.log('Minimum: ' + min.toFixed(2));
+  console.log('Maximum: ' + max.toFixed(2));
   console.log('Average: ' + avg);
 }
 
@@ -44,6 +44,8 @@ function gaussian_random(mean, variance) {
   } while ( (s > 1) || (s == 0) );
 
   var gaussian = x * Math.sqrt(-2*Math.log(s)/s);
+  if (gaussian > 6) { gaussian = 6 }
+  if (gaussian < -6) { gaussian = -6 }
   return mean + gaussian * Math.sqrt(variance);
 }
 
@@ -65,3 +67,24 @@ console.log("Straight method: ");
 do_tests(test_count, toss_count, gaussian_straight_test);
 console.log("Box-Muller method: ");
 do_tests(test_count, toss_count, gaussian_bm_test);
+
+test_count = 10000000;
+console.log("\nChecking Box-Muller method boundary breaks, upto "+ test_count + " times each sample size")
+
+smp_size = 9
+do {
+  smp_size += 1;
+  broken = false;
+  console.log('sample size = ' + smp_size);
+
+  for (var i = 0; i < test_count; i++) {
+    var g = gaussian_bm_test(smp_size);
+    if ((g < 0)||(g > smp_size)) {
+      broken = true;
+      console.log('Broken boundaries after ' + i + ' rolls ('+ g +')');
+      break;
+    }
+  }
+} while (broken);
+
+console.log('Remained in boundaries on ' + smp_size + ' sample size!');
